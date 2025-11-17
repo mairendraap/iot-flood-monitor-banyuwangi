@@ -29,17 +29,17 @@ Real-time flood monitoring system for Banyuwangi district with web dashboard and
 ## Features
 
 ### Web Dashboard
-- ** Real-time Monitoring** - Live data for 7 rivers
-- ** Interactive Maps** - Leaflet.js with status markers
-- ** Data Visualization** - Charts.js for analytics
-- ** Admin Panel** - Device management (login required)
-- ** Responsive Design** - Mobile-friendly interface
+- **Real-time Monitoring** - Live data for 7 rivers
+- **Interactive Maps** - Leaflet.js with status markers
+- **Data Visualization** - Charts.js for analytics
+- **Admin Panel** - Device management (login required)
+- **Responsive Design** - Mobile-friendly interface
 
 ### Python Data Processing
-- ** Data Generation** - Realistic sample data
-- ** Statistical Analysis** - Correlation and trend analysis
-- ** Visualization** - Automated plot generation
-- ** Data Export** - CSV, JSON, and image outputs
+- **Data Generation** - Realistic sample data
+- **Statistical Analysis** - Correlation and trend analysis
+- **Visualization** - Automated plot generation
+- **Data Export** - CSV, JSON, and image outputs
 
 ## Installation
 
@@ -74,7 +74,7 @@ Real-time flood monitoring system for Banyuwangi district with web dashboard and
    Web Dashboard: http://localhost:8000/static/
    Admin Login:   http://localhost:8000/php/login/
 
-**Project Structure**
+## Project Structure
  
       ├──  WEB DASHBOARD/
       │   ├── static/           # Frontend files
@@ -88,7 +88,7 @@ Real-time flood monitoring system for Banyuwangi district with web dashboard and
       └──  Documentation
           └── README.md
 
-**Technology Stack**
+## Technology Stack
 
 **Frontend:**
 HTML5 - Semantic structure
