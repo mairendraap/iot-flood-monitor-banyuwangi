@@ -75,17 +75,18 @@ Real-time flood monitoring system for Banyuwangi district with web dashboard and
    Admin Login:   http://localhost:8000/php/login/
 
 **Project Structure**
-   ├──  WEB DASHBOARD/
-   │   ├── static/           # Frontend files
-   │   └── php/             # Backend PHP
-   ├──  PYTHON DATA PROCESSING/
-   │   ├── main.py          # Main entry point
-   │   ├── data_sampler.py  # Data generation
-   │   ├── data_analyzer.py # Statistical analysis
-   │   ├── data_visualizer.py # Plot creation
-   │   └── outputs/         # Generated files
-   └──  Documentation
-       └── README.md
+ 
+      ├──  WEB DASHBOARD/
+      │   ├── static/           # Frontend files
+      │   └── php/             # Backend PHP
+      ├──  PYTHON DATA PROCESSING/
+      │   ├── main.py          # Main entry point
+      │   ├── data_sampler.py  # Data generation
+      │   ├── data_analyzer.py # Statistical analysis
+      │   ├── data_visualizer.py # Plot creation
+      │   └── outputs/         # Generated files
+      └──  Documentation
+          └── README.md
 
 **Technology Stack**
 
