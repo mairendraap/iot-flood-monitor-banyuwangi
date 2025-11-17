@@ -13,13 +13,8 @@ Real-time flood monitoring system for Banyuwangi district with web dashboard and
 - [Project Overview](#-project-overview)
 - [Features](#-features)
 - [Installation](#-installation)
-- [Usage](#-usage)
 - [Project Structure](#-project-structure)
-- [Screenshots](#-screenshots)
 - [Technology Stack](#-technology-stack)
-- [Contributing](#-contributing)
-- [License](#-license)
-- [Support](#-support)
 
 ## Project Overview
 
@@ -33,14 +28,14 @@ Real-time flood monitoring system for Banyuwangi district with web dashboard and
 
 ## Features
 
-### 🌐 Web Dashboard
+### Web Dashboard
 - **📊 Real-time Monitoring** - Live data for 7 rivers
 - **🗺️ Interactive Maps** - Leaflet.js with status markers
 - **📈 Data Visualization** - Charts.js for analytics
 - **🔐 Admin Panel** - Device management (login required)
 - **📱 Responsive Design** - Mobile-friendly interface
 
-### 🐍 Python Data Processing
+### Python Data Processing
 - **📊 Data Generation** - Realistic sample data
 - **📈 Statistical Analysis** - Correlation and trend analysis
 - **🎨 Visualization** - Automated plot generation
@@ -80,15 +75,35 @@ Real-time flood monitoring system for Banyuwangi district with web dashboard and
    Admin Login:   http://localhost:8000/php/login/
 
 **Project Structure**
-   ```bash
-   ├── 🌐 WEB DASHBOARD/
+   ├──  WEB DASHBOARD/
    │   ├── static/           # Frontend files
    │   └── php/             # Backend PHP
-   ├── 🐍 PYTHON DATA PROCESSING/
+   ├──  PYTHON DATA PROCESSING/
    │   ├── main.py          # Main entry point
    │   ├── data_sampler.py  # Data generation
    │   ├── data_analyzer.py # Statistical analysis
    │   ├── data_visualizer.py # Plot creation
    │   └── outputs/         # Generated files
-   └── 📄 Documentation
+   └──  Documentation
        └── README.md
+
+**Technology Stack**
+
+**Frontend:**
+HTML5 - Semantic structure
+CSS3 - Responsive styling with CSS Grid/Flexbox
+JavaScript ES6+ - Interactive features
+Chart.js - Data visualization
+Leaflet.js - Interactive maps
+Font Awesome - Icons
+
+**Backend**
+PHP - Authentication and routing
+Python - Data processing and analysis
+Pandas - Data manipulation
+Matplotlib/Seaborn - Visualization
+NumPy/SciPy - Scientific computing
+Data Format
+JSON - Configuration and data storage
+CSV - Data export
+PNG/SVG - Plot outputs
