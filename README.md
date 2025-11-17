@@ -10,36 +10,36 @@
 Real-time flood monitoring system for Banyuwangi district with web dashboard and data analysis capabilities.
 
 ## Table of Contents
-- [Project Overview](#-project-overview)
-- [Features](#-features)
-- [Installation](#-installation)
-- [Project Structure](#-project-structure)
-- [Technology Stack](#-technology-stack)
+- [Project Overview](#project-overview)
+- [Features](#features)
+- [Installation](#installation)
+- [Project Structure](#project-structure)
+- [Technology Stack](#technology-stack)
 
 ## Project Overview
 
 **IoT Flood Monitor Banyuwangi** is a comprehensive flood monitoring system that provides real-time data visualization and analysis for 7 major rivers in Banyuwangi district. The system combines web technologies with data science for effective disaster management.
 
 ### Key Components:
-- 🌐 **Web Dashboard** - Real-time monitoring interface
-- 🐍 **Data Processing** - Python analysis and visualization  
-- 🔐 **Authentication** - Secure admin access
-- 📊 **Analytics** - Statistical insights and predictions
+- **Web Dashboard** - Real-time monitoring interface
+- **Data Processing** - Python analysis and visualization  
+- **Authentication** - Secure admin access
+- **Analytics** - Statistical insights and predictions
 
 ## Features
 
 ### Web Dashboard
-- **📊 Real-time Monitoring** - Live data for 7 rivers
-- **🗺️ Interactive Maps** - Leaflet.js with status markers
-- **📈 Data Visualization** - Charts.js for analytics
-- **🔐 Admin Panel** - Device management (login required)
-- **📱 Responsive Design** - Mobile-friendly interface
+- ** Real-time Monitoring** - Live data for 7 rivers
+- ** Interactive Maps** - Leaflet.js with status markers
+- ** Data Visualization** - Charts.js for analytics
+- ** Admin Panel** - Device management (login required)
+- ** Responsive Design** - Mobile-friendly interface
 
 ### Python Data Processing
-- **📊 Data Generation** - Realistic sample data
-- **📈 Statistical Analysis** - Correlation and trend analysis
-- **🎨 Visualization** - Automated plot generation
-- **📁 Data Export** - CSV, JSON, and image outputs
+- ** Data Generation** - Realistic sample data
+- ** Statistical Analysis** - Correlation and trend analysis
+- ** Visualization** - Automated plot generation
+- ** Data Export** - CSV, JSON, and image outputs
 
 ## Installation
 
