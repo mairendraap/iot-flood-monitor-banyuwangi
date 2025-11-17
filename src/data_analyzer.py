@@ -23,7 +23,7 @@ class FloodDataAnalyzer:
         available_cols = [col for col in numerical_cols if col in self.data.columns]
         
         if not available_cols:
-            print("⚠️ No numerical columns found for analysis")
+            print("No numerical columns found for analysis")
             return pd.DataFrame()
         
         stats_df = self.data[available_cols].describe()
@@ -36,7 +36,7 @@ class FloodDataAnalyzer:
                 additional_stats[f'{col}_skew'] = stats.skew(self.data[col].dropna())
                 additional_stats[f'{col}_kurtosis'] = stats.kurtosis(self.data[col].dropna())
             except Exception as e:
-                print(f"⚠️ Could not calculate additional stats for {col}: {e}")
+                print(f"Could not calculate additional stats for {col}: {e}")
         
         if additional_stats:
             stats_df = pd.concat([stats_df, pd.DataFrame(additional_stats, index=['additional'])])
@@ -49,7 +49,7 @@ class FloodDataAnalyzer:
         flood_data = self.data[self.data['flood_status'] == 'BANJIR']
         
         if flood_data.empty:
-            print("⚠️ No flood events found for analysis")
+            print("No flood events found for analysis")
             return {}
         
         flood_stats = {
@@ -126,7 +126,7 @@ class FloodDataAnalyzer:
             
             return seasonal_stats
         except Exception as e:
-            print(f"⚠️ Error in seasonal analysis: {e}")
+            print(f"Error in seasonal analysis: {e}")
             # Return empty DataFrame dengan struktur yang diharapkan
             return pd.DataFrame()
     
@@ -139,7 +139,7 @@ class FloodDataAnalyzer:
         available_cols = [col for col in numerical_cols if col in self.data.columns]
         
         if len(available_cols) < 2:
-            print("⚠️ Not enough numerical columns for correlation analysis")
+            print("Not enough numerical columns for correlation analysis")
             return {
                 'correlation_matrix': pd.DataFrame(),
                 'strong_correlations': {}
@@ -181,12 +181,12 @@ class FloodDataAnalyzer:
             self.analysis_results['river_comparison'] = river_stats
             return river_stats
         except Exception as e:
-            print(f"⚠️ Error in river comparison: {e}")
+            print(f"Error in river comparison: {e}")
             return pd.DataFrame()
     
     def generate_comprehensive_report(self):
         """Generate comprehensive analysis report"""
-        print("📈 Generating Comprehensive Flood Analysis Report...")
+        print("Generating Comprehensive Flood Analysis Report...")
         print("=" * 50)
         
         # Run all analyses dengan error handling
@@ -197,20 +197,20 @@ class FloodDataAnalyzer:
             correlation_stats = self.correlation_analysis()
             river_stats = self.river_comparison_analysis()
         except Exception as e:
-            print(f"❌ Error during analysis: {e}")
+            print(f"Error during analysis: {e}")
             return self.analysis_results
         
         # Print summary
-        print(f"📊 Dataset Overview:")
-        print(f"   Total Records: {len(self.data):,}")
-        print(f"   Rivers Monitored: {self.data['river_name'].nunique()}")
-        print(f"   Date Range: {self.data['timestamp'].min()} to {self.data['timestamp'].max()}")
+        print(f"Dataset Overview:")
+        print(f"Total Records: {len(self.data):,}")
+        print(f"Rivers Monitored: {self.data['river_name'].nunique()}")
+        print(f"Date Range: {self.data['timestamp'].min()} to {self.data['timestamp'].max()}")
         
         if flood_stats:
-            print(f"🌊 Flood Analysis:")
-            print(f"   Total Flood Events: {flood_stats.get('total_flood_events', 0)}")
-            print(f"   Max Water Height: {flood_stats.get('max_water_height', 0):.1f} cm")
-            print(f"   Rivers with Floods: {flood_stats.get('rivers_with_floods', 0)}")
+            print(f"Flood Analysis:")
+            print(f"Total Flood Events: {flood_stats.get('total_flood_events', 0)}")
+            print(f"Max Water Height: {flood_stats.get('max_water_height', 0):.1f} cm")
+            print(f"Rivers with Floods: {flood_stats.get('rivers_with_floods', 0)}")
         
         # Seasonal analysis dengan error handling
         if temporal_stats and 'seasonal' in temporal_stats and not temporal_stats['seasonal'].empty:
@@ -218,15 +218,15 @@ class FloodDataAnalyzer:
             try:
                 rainy_stats = seasonal_data.loc['Rainy', ('water_height_cm', 'mean')] if 'Rainy' in seasonal_data.index else 0
                 dry_stats = seasonal_data.loc['Dry', ('water_height_cm', 'mean')] if 'Dry' in seasonal_data.index else 0
-                print(f"⏰ Temporal Patterns:")
-                print(f"   Rainy Season Avg Height: {rainy_stats:.1f} cm")
-                print(f"   Dry Season Avg Height: {dry_stats:.1f} cm")
+                print(f"Temporal Patterns:")
+                print(f"Rainy Season Avg Height: {rainy_stats:.1f} cm")
+                print(f"Dry Season Avg Height: {dry_stats:.1f} cm")
             except:
-                print(f"⏰ Temporal Patterns: Available (check details)")
+                print(f"Temporal Patterns: Available (check details)")
         
         # Correlation summary
         if correlation_stats and correlation_stats['strong_correlations']:
-            print(f"🔗 Strong Correlations (>0.3):")
+            print(f"Strong Correlations (>0.3):")
             for corr_name, value in list(correlation_stats['strong_correlations'].items())[:3]:
                 print(f"   {corr_name}: {value}")
         

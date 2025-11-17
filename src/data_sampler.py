@@ -19,7 +19,7 @@ class FloodDataSampler:
             hours = self.sampling_config['systematic_hours']
         
         sampled_data = self.data[self.data['timestamp'].dt.hour.isin(hours)]
-        print(f"🔢 Systematic sampling: {len(sampled_data)} records at hours {hours}")
+        print(f"Systematic sampling: {len(sampled_data)} records at hours {hours}")
         return sampled_data
     
     def stratified_sampling(self, stratify_column='flood_status', samples_per_class=None):
@@ -38,10 +38,10 @@ class FloodDataSampler:
                 sampled = class_data
             
             stratified_samples.append(sampled)
-            print(f"   📦 {class_value}: {len(sampled)} samples")
+            print(f"{class_value}: {len(sampled)} samples")
         
         result = pd.concat(stratified_samples)
-        print(f"⚖️ Stratified sampling: {len(result)} total records")
+        print(f"Stratified sampling: {len(result)} total records")
         return result
     
     def random_sampling(self, sample_size=None):
@@ -50,7 +50,7 @@ class FloodDataSampler:
             sample_size = self.sampling_config['random_sample_size']
         
         sampled_data = self.data.sample(n=min(sample_size, len(self.data)), random_state=42)
-        print(f"🎲 Random sampling: {len(sampled_data)} records")
+        print(f"Random sampling: {len(sampled_data)} records")
         return sampled_data
     
     def temporal_sampling(self, frequency=None, river_specific=None):
@@ -74,7 +74,7 @@ class FloodDataSampler:
             'humidity_pct': 'mean'
         }).reset_index()
         
-        print(f"⏰ Temporal sampling ({frequency}): {len(temporal_data)} records")
+        print(f"Temporal sampling ({frequency}): {len(temporal_data)} records")
         return temporal_data
     
     def flood_event_sampling(self, include_before_hours=6, include_after_hours=12):
@@ -82,7 +82,7 @@ class FloodDataSampler:
         flood_events = self.data[self.data['flood_status'] == 'BANJIR']
         
         if flood_events.empty:
-            print("⚠️ No flood events found for sampling")
+            print("No flood events found for sampling")
             return pd.DataFrame()
         
         event_times = flood_events['timestamp'].unique()
@@ -105,13 +105,13 @@ class FloodDataSampler:
             event_windows.append(window_data)
         
         result = pd.concat(event_windows) if event_windows else pd.DataFrame()
-        print(f"🌊 Flood event sampling: {len(result)} records from {len(event_times)} events")
+        print(f"Flood event sampling: {len(result)} records from {len(event_times)} events")
         return result
     
     def river_specific_sampling(self, river_name):
         """Sampling data untuk sungai tertentu"""
         river_data = self.data[self.data['river_name'] == river_name].copy()
-        print(f"🌊 River-specific sampling ({river_name}): {len(river_data)} records")
+        print(f"River-specific sampling ({river_name}): {len(river_data)} records")
         return river_data
     
     def generate_all_samples(self):

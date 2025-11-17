@@ -4,7 +4,6 @@ import numpy as np
 from datetime import datetime, timedelta
 
 def create_directories():
-    """Create all necessary directories for the project"""
     directories = [
         'data/raw',
         'data/processed',
@@ -17,12 +16,9 @@ def create_directories():
     
     for directory in directories:
         os.makedirs(directory, exist_ok=True)
-        print(f"   ✅ Created: {directory}")
+        print(f"Created: {directory}")
 
 def calculate_water_flow(water_height_cm, river_width_m=10, river_slope=0.01):
-    """
-    Calculate water flow using Manning's equation (simplified)
-    """
     # Convert height to meters
     h = water_height_cm / 100
     
@@ -60,6 +56,10 @@ def calculate_flood_duration(flood_events):
                 flood_durations.append(current_duration)
                 current_duration = 0
     
+    # Don't forget the last event
+    if current_duration > 0:
+        flood_durations.append(current_duration)
+    
     return flood_durations
 
 def format_timestamp(timestamp):
@@ -77,3 +77,20 @@ def get_river_coordinates(river_name):
         "Sungai_Watugede": (-8.2251, 114.3562)
     }
     return coordinates.get(river_name, (-8.219094, 114.369141))
+
+def check_required_directories():
+    """Check if all required directories exist"""
+    required_dirs = [
+        'data/raw',
+        'data/processed', 
+        'data/samples',
+        'outputs/plots',
+        'outputs/reports'
+    ]
+    
+    missing_dirs = []
+    for directory in required_dirs:
+        if not os.path.exists(directory):
+            missing_dirs.append(directory)
+    
+    return missing_dirs

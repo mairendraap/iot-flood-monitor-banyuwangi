@@ -4,12 +4,13 @@ DATASET_CONFIG = {
     'days': 90,
     'sampling_interval_hours': 1,
     'rivers': [
-        "Sungai_Bajulmati", 
-        "Sungai_Kalibendo", 
-        "Sungai_Setail",
-        "Sungai_Sukowidi", 
-        "Sungai_Sumberagung", 
-        "Sungai_Watugede"
+        "Setail_River", 
+        "Kalibendo_River", 
+        "Tambong_River",
+        "Panggang_River", 
+        "Mayang_River", 
+        "Bomo_River",
+        "Sobo_River"
     ],
     'sensor_height_cm': 300,
     'flood_threshold_cm': 200,
