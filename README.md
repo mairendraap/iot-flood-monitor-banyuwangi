@@ -57,5 +57,5 @@ Real-time flood monitoring system for Banyuwangi district with web dashboard and
 
 1. **Clone Repository**
    ```bash
-   git clone https://github.com/yourusername/iot-flood-monitor-banyuwangi.git
+   git clone https://github.com/mairendraap/iot-flood-monitor-banyuwangi.git
    cd iot-flood-monitor-banyuwangi
