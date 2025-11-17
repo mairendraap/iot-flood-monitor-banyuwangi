@@ -59,3 +59,19 @@ Real-time flood monitoring system for Banyuwangi district with web dashboard and
    ```bash
    git clone https://github.com/mairendraap/iot-flood-monitor-banyuwangi.git
    cd iot-flood-monitor-banyuwangi
+
+2. **Setup Web Server**
+   ```bash
+   # Copy to XAMPP htdocs or use PHP built-in server
+   php -S localhost:8000
+   
+3. **Install Python Dependencies**
+   ```bash
+   pip install pandas numpy matplotlib seaborn scipy
+   
+3. **Install Python Dependencies**
+   ```bash
+   pip install pandas numpy matplotlib seaborn scipy
+   
+   
+   
