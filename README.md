@@ -1,4 +1,4 @@
-# 🌊 IoT Flood Monitor Banyuwangi
+# IoT Flood Monitor Banyuwangi
 
 ![Python](https://img.shields.io/badge/python-3.8+-blue.svg)
 ![PHP](https://img.shields.io/badge/php-7.4+-purple.svg)
@@ -9,7 +9,7 @@
 
 Real-time flood monitoring system for Banyuwangi district with web dashboard and data analysis capabilities.
 
-## 📑 Table of Contents
+## Table of Contents
 - [Project Overview](#-project-overview)
 - [Features](#-features)
 - [Installation](#-installation)
@@ -21,7 +21,7 @@ Real-time flood monitoring system for Banyuwangi district with web dashboard and
 - [License](#-license)
 - [Support](#-support)
 
-## 🌟 Project Overview
+## Project Overview
 
 **IoT Flood Monitor Banyuwangi** is a comprehensive flood monitoring system that provides real-time data visualization and analysis for 7 major rivers in Banyuwangi district. The system combines web technologies with data science for effective disaster management.
 
@@ -31,7 +31,7 @@ Real-time flood monitoring system for Banyuwangi district with web dashboard and
 - 🔐 **Authentication** - Secure admin access
 - 📊 **Analytics** - Statistical insights and predictions
 
-## 🚀 Features
+## Features
 
 ### 🌐 Web Dashboard
 - **📊 Real-time Monitoring** - Live data for 7 rivers
@@ -46,7 +46,7 @@ Real-time flood monitoring system for Banyuwangi district with web dashboard and
 - **🎨 Visualization** - Automated plot generation
 - **📁 Data Export** - CSV, JSON, and image outputs
 
-## 🛠️ Installation
+## Installation
 
 ### Prerequisites
 - XAMPP (Apache + PHP)
@@ -92,8 +92,3 @@ Real-time flood monitoring system for Banyuwangi district with web dashboard and
    │   └── outputs/         # Generated files
    └── 📄 Documentation
        └── README.md
-
-
-   
-   
-   
