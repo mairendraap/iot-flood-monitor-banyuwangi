@@ -69,9 +69,31 @@ Real-time flood monitoring system for Banyuwangi district with web dashboard and
    ```bash
    pip install pandas numpy matplotlib seaborn scipy
    
-3. **Install Python Dependencies**
+4. **Run Data Processing**
    ```bash
-   pip install pandas numpy matplotlib seaborn scipy
+   cd python
+   python main.py
+
+5. **Access Application**
+   ```bash
+   Web Dashboard: http://localhost:8000/static/
+   Admin Login:   http://localhost:8000/php/login/
+
+**Project Structure**
+   ```bash
+   ├── 🌐 WEB DASHBOARD/
+   │   ├── static/           # Frontend files
+   │   └── php/             # Backend PHP
+   ├── 🐍 PYTHON DATA PROCESSING/
+   │   ├── main.py          # Main entry point
+   │   ├── data_sampler.py  # Data generation
+   │   ├── data_analyzer.py # Statistical analysis
+   │   ├── data_visualizer.py # Plot creation
+   │   └── outputs/         # Generated files
+   └── 📄 Documentation
+       └── README.md
+
+
    
    
    
